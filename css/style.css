@@ -1,0 +1,178 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  width: 900px;
+  margin: auto;
+  background-color: #2f3848;
+}
+
+
+/* typos */
+
+p {
+  color: white;
+}
+
+a {
+  color: yellowgreen;
+}
+h2 {
+	color: #0099cc;
+}
+
+
+/* style du header */
+
+h1 {
+  color: white;
+  font-style: italic;
+  font-size: 40px;
+  background-color: #f05768;
+  border-radius: 0 0 10px 10px;
+  border-bottom: 3px solid lightgrey;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  font-weight: bolder;
+}
+
+
+/* style du Menu principal */
+
+nav {
+  /* flex: pour positionner facilement les 2 listes des liens */
+
+  /* les propriÃƒÆ’Ã‚Â©tÃƒÆ’Ã‚Â©s ÃƒÆ’Ã‚Â  prÃƒÆ’Ã‚Â©fix ont ÃƒÆ’Ã‚Â©tÃƒÆ’Ã‚Â© rajoutÃƒÆ’Ã‚Â©es automatiquement par autoprefixer (et re-indentÃƒÆ’Ã‚Â©es correctement grÃƒÆ’Ã‚Â¢ce ÃƒÆ’Ã‚Â  beautify ;) ) */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* => 1 liste collÃƒÆ’Ã‚Â©e ÃƒÆ’Ã‚Â  gauche et l'autre collÃƒÆ’Ã‚Â©e ÃƒÆ’Ã‚Â  droite */
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+nav ul {
+  /* dÃƒÆ’Ã‚Â©sactive le display (block pour les li) => les enfant des ul vont tous s'aligner */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+nav a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#main-nav li {
+  margin-right: 1em;
+}
+
+#social-nav img {
+  height: 1.5em;
+  margin-left: 1em;
+}
+
+/* style de la section highlight */
+#highlight {
+  /* (parent du h2) */
+  position: relative;
+}
+#highlight h2 {
+  /* titre rose "au dessus" de l'image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f05768;
+  color: #ffffff;
+  margin: 0;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+#highlight img {
+  max-width: 100%;
+}
+
+
+/* mise en page de gallery et aside*/
+/* 1. avec float */
+/*
+main {
+  overflow: hidden;
+}
+#gallery {
+  float: left;
+}
+aside {
+  float: right;
+}
+*/
+
+/* 2. avec flexbox */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* style de la gallery */
+#gallery {
+  max-width: 70%;
+
+  /* "hack" qu'on utilise pour Ã©viter l'Ã©crat entre les Ã©lems inline */
+  font-size: 0;
+
+  /* pour ajouter une gouttière entre gallery et aside */
+  box-sizing: border-box; /* permet de prendre en compte la taille du padding sans dépasser des 70% */
+  padding-right: 50px;
+}
+#gallery img {
+  /* largeur Ã  1/4 du total - 5px de marge */
+  width: calc(25% - 5px);
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+#gallery img:first-of-type {
+  /* largeur 1/2 du parent - la marge */
+  width: calc(50% - 5px);
+
+  /* permet aux autres images de se "rÃ©partir autour" de l'image qui flotte */
+  float: left;
+}
+
+/* style de laside */
+aside {
+  background-color: #004488;
+  max-width: 30%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+aside h3 {
+  color: #00ccff;
+  text-transform: uppercase;
+  border-bottom: 2px solid #00ccff;
+  padding: 18px 0;
+  line-height: 1.25;
+}
+aside p {
+  color: yellowgreen;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* footer */
+footer {
+  padding: 20px;
+  margin-top: 80px;
+  /* clear: both; */
+}
+footer p {
+  color: #60b9ce;
+  text-align: center;
+}
