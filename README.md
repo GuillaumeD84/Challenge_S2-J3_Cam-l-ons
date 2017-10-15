@@ -9,4 +9,5 @@ S2-J3 | 11/10/2017
 Type : GitHub
 
 ## Objectif
-Réaliser l'intégration de la page ci-dessous en collaborant grâce à GitHub.
+Collaborer avec une équipe pour réaliser l'intégration de la page ci-dessous grâce à GitHub.
+![goal](docs/resultat.png)
