@@ -6,7 +6,8 @@ Guillaume DURAND
 Promo : Explorer  
 S2-J3 | 11/10/2017
 
-Type : GitHub
+Formateur : Lucie  
+Type : HTML | CSS | GitHub
 
 ## Objectif
 Collaborer avec une équipe pour réaliser l'intégration de la page ci-dessous grâce à GitHub.
